@@ -1,0 +1,20 @@
+jobs:
+- job: Linux
+  strategy:
+    matrix:
+#      Python36:
+#        python.version: '3.6'
+#        python.architecture: 'x64'
+#      Python37:
+#        python.version: '3.7'
+#        python.architecture: 'x64'
+      Python38:
+        python.version: '3.8'
+        python.architecture: 'x64'
+  pool: pcml-ada-self-hosted-agents
+  steps:
+  #  - template: .ci/checkout.yml
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: $(python.version)
+      displayName: 'Use Python $(python.version)'
