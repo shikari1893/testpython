@@ -1,7 +1,7 @@
 jobs:
 - job: Linux
-  strategy:
-    matrix:
+  #strategy:
+  #  matrix:
 #      Python36:
 #        python.version: '3.6'
 #        python.architecture: 'x64'
