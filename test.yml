@@ -11,7 +11,7 @@ jobs:
       Python38:
         python.version: '3.8'
         python.architecture: 'x64'
-  pool: pcml-ada-self-hosted-agents
+  pool: Default
   steps:
   #  - template: .ci/checkout.yml
     - task: UsePythonVersion@0
