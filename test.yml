@@ -9,7 +9,7 @@ jobs:
 #        python.version: '3.7'
 #        python.architecture: 'x64'
       Python38:
-        python.version: '3.x'
+        python.version: '3.6.8'
         python.architecture: 'x64'
   pool: Default
   steps:
