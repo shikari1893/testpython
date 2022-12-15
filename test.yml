@@ -1,24 +1,11 @@
 jobs:
 - job: Linux
-  #strategy:
-  #  matrix:
-#      Python36:
-#        python.version: '3.6'
-#        python.architecture: 'x64'
-#      Python37:
-#        python.version: '3.7'
-#        python.architecture: 'x64'
-      #Python38:
-      #  python.version: '3.8.12'
-      #  python.architecture: 'x64'
   pool: Default
   steps:
-    
-  #  - template: .ci/checkout.yml
-    - task: UsePythonVersion@0
-      inputs:
-        versionSpec: 3.8.12
-        #githubToken: '$(PAT)'
-        #addToPath: true
-        architecture: 'x64'
-      displayName: 'Use Python $(python.version)'
+   - task: UsePythonVersion@0
+     inputs:
+      versionSpec: '3.x'
+      addToPath: true
+      architecture: 'x64'
+  
+  
