@@ -1,5 +1,5 @@
 jobs:
-- job: Linux
+- job: PythonTest
   pool: Default
   steps:
    - task: UsePythonVersion@0
